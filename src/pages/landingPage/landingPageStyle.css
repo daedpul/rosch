@@ -1,0 +1,9 @@
+#banner {
+    position: relative;
+}
+
+#banner.child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
