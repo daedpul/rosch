@@ -1,15 +1,16 @@
 
 import logo from "../../assets/logo.jpg"
-import banner from "../../assets/banner.jpg"
+// import banner from "../../assets/banner.jpg"
 import "../landingPage/landingPageStyle.css";
 import NavigationBar from "../navigationBar/navigationBar";
+import SnapImage from "./snapImages";
 function LandingPage() {
 
     return (
         <>
             
             <div style={{
-                backgroundColor: "#3944BC",
+                backgroundColor: "#e3f2fd",
                 height: "200vh",
                 width: "100vw",
                 // display: "flex",
@@ -17,11 +18,12 @@ function LandingPage() {
                 alignItems: 'start',
                 maxWidth: "100%",
             }}>
-                <img
+                {/* <img
                     style={{
                         height: "100vh",
                     }}
-                    src={banner} alt="banner" />
+                    src={banner} alt="banner" /> */}
+                    <SnapImage/>
 
                 <div style={{
                     justifyContent: "center",

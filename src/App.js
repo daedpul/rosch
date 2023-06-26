@@ -9,7 +9,7 @@ function App() {
         <NavigationBar/>
         <Routes>
             <Route path="/" element={<LandingPage />} />
-            {/* <Route path="/contact" element={<ContactUs />}/> */}
+            <Route path="/contact" element={<ContactUs />}/>
             {/* <Route path="/" element={<LandingPage />}/> */}
           </Routes>
       

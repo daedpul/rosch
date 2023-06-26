@@ -1,10 +1,7 @@
 
-import { Link } from "react-router-dom";
 import React from "react";
 import "./navigationBarStyle.css"
 import logo from "../../assets/logo.jpg"
-import ReactDOM from "react-dom/client";
-
 
 function NavigationBar(props) {
 
@@ -13,7 +10,7 @@ function NavigationBar(props) {
             height: "100px",
             display: "flex",
             width: "100vw",
-            backgroundColor:"red",
+            backgroundColor:"#e3f2fd",
             justifyContent: "space-between",
             alignItems: "center",
         }}>
@@ -27,10 +24,10 @@ function NavigationBar(props) {
                 justifyContent: "center"
             }}>
 
-                <li><Link to="/">Home</Link></li>
-                <li>Hello World</li>
+                {/* <li><Link to="/">Home</Link></li> */}
+                <li>Department</li>
                 <li>About us</li>
-                <li><Link to="/contact">Contact Us</Link></li>
+                {/* <li><Link to="/contact">Contact Us</Link></li> */}
 
             </ul>
             {/* <LandingPage></LandingPage> */}
@@ -42,4 +39,4 @@ function NavigationBar(props) {
 
 
 export default NavigationBar;
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// const root = ReactDOM.createRoot(document.getElementById('root'));
