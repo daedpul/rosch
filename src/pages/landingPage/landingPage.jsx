@@ -28,7 +28,6 @@ function LandingPage() {
 
                 </div>
                 <div style={{
-                    // width:"100vw",
                     display: "flex",
                     marginLeft: "20vh",
                     marginRight: "20vh",
