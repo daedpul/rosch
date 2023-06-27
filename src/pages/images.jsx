@@ -2,9 +2,25 @@ import hungman from "../assets/hungman.jpeg";
 import banner from "../assets/banner.jpg";
 import gigachad from "../assets/gigachad.jpg";
 import logo from "../assets/logo.jpg";
-import { useState } from "react";
+// import { useState } from "react";
 
-export function PlaceholderImage({ index }) {
+export const images = [
+    {
+        img:hungman,
+    },
+    {
+        img:banner,
+    },
+    {
+        img:gigachad,
+    },
+    {
+        img:logo,
+    },
+];
+
+export default images;
+/*export function PlaceholderImage({ index }) {
 
     const [thisIndex, setIndex] = useState("");
     const [image, setImage] = useState("");
@@ -33,4 +49,4 @@ export function PlaceholderImage({ index }) {
     return (
         <></>
     );
-}
+}*/

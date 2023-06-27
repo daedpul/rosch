@@ -8,40 +8,33 @@ function LandingPage() {
 
     return (
         <>
-            
+
             <div style={{
                 backgroundColor: "#e3f2fd",
-                height: "200vh",
+                height: "100%",
                 width: "100vw",
-                // display: "flex",
                 justifyContent: 'start',
                 alignItems: 'start',
                 maxWidth: "100%",
-            }}>
-                {/* <img
-                    style={{
-                        height: "100vh",
-                    }}
-                    src={banner} alt="banner" /> */}
-                    <SnapImage/>
+            }}>                    <SnapImage />
 
                 <div style={{
                     justifyContent: "center",
                     display: "flex",
                     alignItems: "center",
                     width: "100vw",
-                    // backgroundColor:"red"
                 }}>
-                    <h1 style={{fontSize:"70px"}}>Welcome</h1>
+                    <h1 style={{ fontSize: "70px" }}>Welcome</h1>
 
                 </div>
                 <div style={{
+                    // width:"100vw",
                     display: "flex",
-                    paddingLeft: "20vh",
-                    paddingRight: "20vh",
+                    marginLeft: "20vh",
+                    marginRight: "20vh",
+                    maxWidth:"100%",
                     flexDirection: "column"
                 }}>
-
                     <h2>
                         Through the years, ROSCH ENTERPRISES has been contracted to work with small scale projects such as Creation of Warehouses and Small Back up Genset and Fuel Storage Houses and Large Scale projects such as Multiple Units of Two Story Residential Buildings, and One Story Buildings with Three Classrooms. We have also been contracted to perform Rectification works on multiple housing units that were started out by other competitors and we were able to perform everything with no problems and within the specified time frame. We beat deadlines and always create the reports needed for the completion of the projects.
                     </h2>
@@ -56,6 +49,7 @@ function LandingPage() {
                     <h2>
                         Today, ROSCH ENTERPRISES holds a track record of quality, cost effective service and can proudly and effectively compete with its contemporaries in the service contracting business.
                     </h2>
+
                 </div>
             </div>
         </>

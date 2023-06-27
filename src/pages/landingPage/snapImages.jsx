@@ -1,67 +1,66 @@
 import "../../pages/landingPage/snapimage.css"
 import React, { Component, useEffect } from "react";
-// import { PlaceholderImage } from "../images";
-import hungman from "../../assets/hungman.jpeg";
-import banner from "../../assets/banner.jpg";
-import gigachad from "../../assets/gigachad.jpg";
-import logo from "../../assets/logo.jpg";
+import { images } from "../images";
+
+// import hungman from "../../assets/hungman.jpeg";
+// import banner from "../../assets/banner.jpg";
+// import gigachad from "../../assets/gigachad.jpg";
+// import logo from "../../assets/logo.jpg";
 import { useState } from "react";
 
 
 function SnapImage() {
+    const [image, setImage] = useState(0);
 
-    const [tileImage, setTileImage] = useState("");
-    // setTileImage(setTile(0));
+    const imageLoader = images.map(({ img, index }) => {
+        return <img src={img}
+            style={
+                {
+                    overflow: "hidden",
+                    display: "flex",
+                    objectFit: "contain"
+                }}></img>
+    }
+    );
+    console.log(image)
     return (
         <div style={{
             display: "flex",
             height: "60vh",
-            width: "100vw",
+            // backgroundColor: "green",
+            // width: "100vw",
         }}>
             <>
                 <div style={{
                     height: "60vh",
                     width: "100vw",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+
                     overflow: "hidden",
                 }}>
-                    <img src={tileImage}></img>
+                    <button onClick={() => {
+                        setImage((prev) => {
+                            if (prev < 3) { return image + 1 }
+                            else {
+                                return prev
+                            }
+                        })
+                    }}>+</button>
+                    {imageLoader[image]}
+                    <button onClick={() => {
+                        setImage((prev) => {
+                            if (prev > 0) { return image - 1 }
+                            else {
+                                return prev
+                            }
+                        })
+                    }}>-</button>
+
                 </div>
             </>
         </div>
     );
 }
-
-function setTile({index}) {
-    let placeHolderImage;
-    console.log("hello world")
-    switch (index) {
-        case 0: {
-            placeHolderImage = {
-                image: hungman
-            }
-            break;
-        }
-        case 1: {
-            placeHolderImage = {
-                image: banner
-            }
-            break;
-        }
-        case 2: {
-            placeHolderImage = {
-                image: gigachad
-            }
-            break;
-        }
-        case 3:
-        default: {
-            placeHolderImage = {
-                image: logo
-            }
-            break;
-        }
-    }
-    return placeHolderImage
-}
-
 export default SnapImage;

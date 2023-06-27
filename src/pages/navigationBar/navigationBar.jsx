@@ -24,13 +24,10 @@ function NavigationBar(props) {
                 justifyContent: "center"
             }}>
 
-                {/* <li><Link to="/">Home</Link></li> */}
                 <li>Department</li>
                 <li>About us</li>
-                {/* <li><Link to="/contact">Contact Us</Link></li> */}
 
             </ul>
-            {/* <LandingPage></LandingPage> */}
         </div>
 
     );
