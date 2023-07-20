@@ -1,9 +1,11 @@
 
-import logo from "../../assets/logo.jpg"
+// import logo from "../../assets/logo.jpg"
+import Hierarchy from "../companyHierarchy/hierarchy";
 // import banner from "../../assets/banner.jpg"
 import "../landingPage/landingPageStyle.css";
-import NavigationBar from "../navigationBar/navigationBar";
+// import NavigationBar from "../navigationBar/navigationBar";
 import SnapImage from "./snapImages";
+import CustomFooter from "../footer/footer"
 function LandingPage() {
 
     return (
@@ -50,6 +52,8 @@ function LandingPage() {
                     </h2>
 
                 </div>
+                <Hierarchy/>
+                <CustomFooter/>
             </div>
         </>
     );

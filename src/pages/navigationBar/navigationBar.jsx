@@ -3,14 +3,14 @@ import React from "react";
 import "./navigationBarStyle.css"
 import logo from "../../assets/logo.jpg"
 
-function NavigationBar(props) {
+function NavigationBar() {
 
     return (
         <div className="sticky" style={{
             height: "100px",
             display: "flex",
             width: "100vw",
-            backgroundColor: "#e3f2fd",
+            backgroundColor: "blue",
             justifyContent: "space-between",
             alignItems: "center",
         }}>
@@ -24,9 +24,9 @@ function NavigationBar(props) {
                 justifyContent: "center"
             }}>
 
-                <li>Department</li>
+                <li>Teams</li>
                 <li>About us</li>
-
+                <li>Contact us</li>
             </ul>
         </div>
 

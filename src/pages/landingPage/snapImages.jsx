@@ -10,13 +10,15 @@ import { useState, useEffect } from "react";
 function SnapImage() {
     const [image, setImage] = useState(0);
 
-    const imageLoader = images.map(({ img, index }) => {
+    const imageLoader = images.map(({ img,}) => {
         return <img src={img}
             style={
                 {
+                    height: "60vh",
+                    width: "100vw",
                     display: "flex",
                     objectFit: "contain",
-                    overflow:"hidden"
+                    overflow: "hidden"
                 }}></img>
     }
     );
@@ -26,7 +28,6 @@ function SnapImage() {
         }, 1000)
         return () => clearInterval(intervalId);
     }, []);
-    console.log(image);
     return (
         <div style={{
             display: "flex",
@@ -34,8 +35,7 @@ function SnapImage() {
         }}>
             <>
                 <div style={{
-                    height: "60vh",
-                    width: "100vw",
+
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
