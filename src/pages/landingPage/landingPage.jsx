@@ -1,24 +1,20 @@
 
-// import logo from "../../assets/logo.jpg"
-import Hierarchy from "../companyHierarchy/hierarchy";
-// import banner from "../../assets/banner.jpg"
+
+
 import "../landingPage/landingPageStyle.css";
-// import NavigationBar from "../navigationBar/navigationBar";
-import SnapImage from "./snapImages";
-import CustomFooter from "../footer/footer"
-function LandingPage() {
+import { forwardRef } from "react";
+const LandingPage = forwardRef((props, ref) => {
+    {
 
-    return (
-        <>
-
-            <div style={{
+        return (
+            <div  ref={ref} style={{
                 backgroundColor: "#e3f2fd",
                 height: "100%",
                 width: "100vw",
                 justifyContent: 'start',
                 alignItems: 'start',
                 maxWidth: "100%",
-            }}>                    <SnapImage />
+            }}>
 
                 <div style={{
                     justifyContent: "center",
@@ -33,7 +29,7 @@ function LandingPage() {
                     display: "flex",
                     marginLeft: "20vh",
                     marginRight: "20vh",
-                    maxWidth:"100%",
+                    maxWidth: "100%",
                     flexDirection: "column"
                 }}>
                     <h2>
@@ -52,11 +48,10 @@ function LandingPage() {
                     </h2>
 
                 </div>
-                <Hierarchy/>
-                <CustomFooter/>
             </div>
-        </>
-    );
-}
 
+        );
+    }
+
+})
 export default LandingPage;

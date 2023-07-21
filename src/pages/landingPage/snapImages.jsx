@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 function SnapImage() {
     const [image, setImage] = useState(0);
 
-    const imageLoader = images.map(({ img,}) => {
+    const imageLoader = images.map(({ img, }) => {
         return <img src={img}
             style={
                 {

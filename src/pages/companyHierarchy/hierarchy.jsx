@@ -1,9 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import hungman from "../../assets/hungman.jpeg";
 import '../companyHierarchy/hierarchy.css'
-import { useTransition } from 'react';
-
-
+import { forwardRef } from "react";
 
 const employeeData = [
     {
@@ -97,7 +95,6 @@ function populate() {
             { "name": name, "position": position }
         ]
         index += 1;
-        console.log(index)
         if (index % 2 === 0) {
             return <GridTiles
                 position="center"
@@ -121,13 +118,22 @@ function populate() {
     return people
 }
 
-function Hierarchy() {
+const Hierarchy = forwardRef((props, ref) => {
+    {
 
-    return (
-        <div>
-            {populate()}
-        </div >);
-}
+        return (
+            <div ref={ref}>
+                <h1 style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                }}>
+                    Meet Our Team
+                </h1>
+                {populate()}
+            </div >);
+    }
+})
 
 function GridTiles({ position, justifyContent, flexDirection, props }) {
 
@@ -139,7 +145,7 @@ function GridTiles({ position, justifyContent, flexDirection, props }) {
             display: "flex",
             flexDirection: flexDirection,
             justifyContent: justifyContent,
-            backgroundColor: "red",
+            backgroundColor: "#05C3DD",
             alignItems: position,
             margin: "10vh"
 

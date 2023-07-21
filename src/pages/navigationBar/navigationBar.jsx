@@ -1,9 +1,25 @@
 
 import React from "react";
 import "./navigationBarStyle.css"
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/logo.png"
+import { useEffect } from "react";
 
-function NavigationBar() {
+
+const NavigationBar = ({ teamsRef, aboutRef, contactRef }) => {
+
+
+    const goToTeams = (e) => {
+        e.preventDefault();
+        teamsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    const goToAbout = (e) => {
+        e.preventDefault();
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    const goToContact = (e) => {
+        e.preventDefault();
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
 
     return (
         <div className="sticky" style={{
@@ -24,9 +40,9 @@ function NavigationBar() {
                 justifyContent: "center"
             }}>
 
-                <li>Teams</li>
-                <li>About us</li>
-                <li>Contact us</li>
+                <li onClick={goToTeams}>Teams</li>
+                <li onClick={goToAbout}>About us</li>
+                <li onClick={goToContact}>Contact us</li>
             </ul>
         </div>
 

@@ -1,18 +1,29 @@
 
-import { BrowserRouter , Routes, Route} from "react-router-dom";
-import ContactUs from "../src/pages/contactus/contactus"
 import LandingPage from "../src/pages/landingPage/landingPage"
 import NavigationBar from "./pages/navigationBar/navigationBar";
+import CustomFooter from "../src/pages/footer/footer"
+import Hierarchy from "../src/pages/companyHierarchy/hierarchy";
+import SnapImage from "./pages/landingPage/snapImages";
+import { Route, Routes } from "react-router";
+
+import React from "react";
+
+import { useRef } from "react";
+
+
+
 function App() {
+  const teamsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <div className="App">
-        <NavigationBar/>
-        <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/contact" element={<ContactUs />}/>
-            {/* <Route path="/" element={<LandingPage />}/> */}
-          </Routes>
-      
+      <NavigationBar teamsRef={teamsRef} aboutRef={aboutRef} contactRef={contactRef} />
+      <SnapImage />
+      <LandingPage ref={aboutRef} />
+      <Hierarchy ref={teamsRef} />
+      <CustomFooter ref={contactRef} />
     </div >
   );
 }

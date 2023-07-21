@@ -14,7 +14,7 @@ li {
 li:hover {
     background-color: #4CAF50;
     cursor: pointer;
-    transition: background-color 2s ease-out 100ms;
+    transition: background-color 100ms ease-out 50ms;
 }
 
 div.sticky {
